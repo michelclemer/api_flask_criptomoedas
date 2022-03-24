@@ -6,4 +6,4 @@ polo = Poloniex()
 while True:
     ticker = polo.returnTicker()["BTC_ETH"]
     print(ticker)
-    time.sleep(2)
+    time.sleep(3)
