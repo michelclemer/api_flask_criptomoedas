@@ -25,6 +25,7 @@ pluggy==1.0.0
 poloniex==0.0.17
 pre-commit==2.17.0
 py==1.11.0
+pydantic==1.9.0
 pyparsing==3.0.7
 pytest==7.1.1
 PyYAML==6.0
