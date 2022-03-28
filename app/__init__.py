@@ -1,6 +1,9 @@
 from flask import Flask, render_template
 from flask_sqlalchemy import SQLAlchemy
+from sqlalchemy import create_engine
+
 from app.module_one.controllers import *
+from app.module_one.databases.mysql_database import init_db
 
 app = Flask(__name__)
 
