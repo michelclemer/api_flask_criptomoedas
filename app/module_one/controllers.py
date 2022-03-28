@@ -9,7 +9,9 @@ from flask import (
     url_for,
     jsonify,
 )
+import os
 
+print(os.getcwd())
 from app import *
 
 from app.module_one.candles_model import Candle

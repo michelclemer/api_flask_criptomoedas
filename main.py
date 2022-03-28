@@ -1,9 +1,9 @@
-from datetime import datetime as dt
-from datetime import timedelta
+import time
 
+from poloniex import Poloniex
 
-hora_atual = dt.now()
-
-
-hora_final = hora_atual + timedelta(minutes=2)
-print(hora_final.minute)
+polo = Poloniex()
+while True:
+    ticker = polo.returnTicker()["BTC_ETH"]
+    print(ticker)
+    time.sleep(1)

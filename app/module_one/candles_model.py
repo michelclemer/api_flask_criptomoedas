@@ -5,8 +5,27 @@ from datetime import datetime, timedelta
 import threading
 
 
-class Candle:
+class ModeloCandles:
+    def atualizar_candle(self, lista: dict, nova_lista: dict) -> dict:
+
+        lista["highestBid"] = nova_lista["highestBid"]
+        lista["lowestAsk"] = nova_lista["lowestAsk"]
+        lista["closed"] = nova_lista["last"]
+        return lista
+
+    def formatar_resultado(self, lista):
+        nova_lista = {
+            "abertura": lista["last"],
+            "fechamento": lista["closed"],
+            "maximo": lista["highestBid"],
+            "minimo": lista["lowestAsk"],
+        }
+        return nova_lista
+
+
+class Candle(ModeloCandles):
     def __init__(self):
+
         self.__req = requests.session()
         self.__lista_pair = {
             "last": "",
@@ -17,6 +36,7 @@ class Candle:
         self.__bnb_btc_lista_cinco_minutos = {}
         self.__bnb_btc_lista_dez_minutos = {}
         self.__data_atual = datetime.now()
+        self.__iniciar_candles()
         self.__iniciar_monitor()
 
     def __buscar_dados(self) -> dict:
@@ -33,6 +53,7 @@ class Candle:
             if dt == um_minuto.minute:
                 um_minuto += timedelta(minutes=1)
                 self.__btc_um_minutos()
+
             if dt == cinco_minutos.minute:
                 cinco_minutos += timedelta(minutes=5)
                 self.__btc_cinco_minutos()
@@ -42,7 +63,7 @@ class Candle:
             time.sleep(0.5)
 
     def __btc_base(self) -> dict:
-        btc = self.__buscar_dados()["BNB_BTC"]
+        btc = self.__buscar_dados()["BTC_ETH"]
         lista = [i for i in self.__lista_pair.keys()]
         dicionario = {}
         for key in lista:
@@ -51,7 +72,16 @@ class Candle:
 
     def __btc_um_minutos(self):
         um = self.__btc_base()
-        self.__bnb_btc_lista_um_minuto = um
+        if not self.__bnb_btc_lista_um_minuto:
+
+            self.__bnb_btc_lista_um_minuto = um
+            return self.__bnb_btc_lista_um_minuto
+
+        elif self.__bnb_btc_lista_um_minuto:
+            lista = self.atualizar_candle(self.__bnb_btc_lista_um_minuto, um)
+            print("atualizar = ", lista)
+            return lista
+        return self.__bnb_btc_lista_um_minuto
 
     def __btc_cinco_minutos(self):
         cinco = self.__btc_base()
@@ -65,10 +95,15 @@ class Candle:
         t1 = threading.Thread(target=self.__monitor_tempo)
         t1.start()
 
+    def __iniciar_candles(self):
+        self.__btc_um_minutos()
+
     def retorna_btc(self) -> dict:
+
         resultado = {
-            "1": self.__bnb_btc_lista_um_minuto,
+            "1": self.formatar_resultado(self.__btc_um_minutos()),
             "5": self.__bnb_btc_lista_cinco_minutos,
             "10": self.__bnb_btc_lista_dez_minutos,
         }
+        print(resultado)
         return resultado
