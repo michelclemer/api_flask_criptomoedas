@@ -1,6 +1,6 @@
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
-from api_flask_criptomoedas.app.entites.candle_controller import *
+from .entites.candle_controller import *
 
 app = Flask(__name__)
 

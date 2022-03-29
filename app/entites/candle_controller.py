@@ -1,5 +1,5 @@
 from flask import Blueprint, request, jsonify
-from api_flask_criptomoedas.app.entites.candle_entities import Candle
+from .candle_entities import Candle
 
 model_candle = Blueprint("candles", __name__, url_prefix="/candles")
 candle_ob = Candle()
