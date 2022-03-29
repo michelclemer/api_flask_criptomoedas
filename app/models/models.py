@@ -1,6 +1,6 @@
 from sqlalchemy import DateTime
 from marshmallow_sqlalchemy import SQLAlchemySchema, auto_field
-from api_flask_criptomoedas.app.databases.database_config import *
+from ..databases.database_config import *
 
 
 class Candle(Base):

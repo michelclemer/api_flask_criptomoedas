@@ -10,16 +10,18 @@ class ModeloCandles:
 
         lista["highestBid"] = nova_lista["highestBid"]
         lista["lowestAsk"] = nova_lista["lowestAsk"]
-        lista["closed"] = nova_lista["last"]
+        lista["close"] = nova_lista["last"]
 
         if "hash" not in lista.keys():
             lista["hash"] = random.getrandbits(128)
         return lista
 
     def formatar_resultado(self, lista):
+        print("formatar = ", lista)
+
         nova_lista = {
             "abertura": lista["last"],
-            "fechamento": lista["closed"],
+            "fechamento": lista["close"],
             "maximo": lista["highestBid"],
             "minimo": lista["lowestAsk"],
             "hash": lista["hash"],
@@ -45,6 +47,7 @@ class Candle(ModeloCandles):
 
     def __buscar_dados(self) -> dict:
         response = self.__req.get("https://poloniex.com/public?command=returnTicker")
+
         return response.json()
 
     def __monitor_tempo(self) -> None:
@@ -90,33 +93,33 @@ class Candle(ModeloCandles):
 
         elif self.__bnb_btc_lista_um_minuto:
             lista = self.atualizar_candle(self.__bnb_btc_lista_um_minuto, um)
-            print("atualizar = ", lista)
+
             self.__bnb_btc_lista_um_minuto = lista
             return lista
 
     def __btc_cinco_minutos(self):
         cinco = self.__btc_base()
-        print("cinco = ", cinco)
+
         if not self.__bnb_btc_lista_cinco_minutos:
             self.__bnb_btc_lista_cinco_minutos = cinco
             return self.__bnb_btc_lista_cinco_minutos
 
         elif self.__bnb_btc_lista_cinco_minutos:
             lista = self.atualizar_candle(self.__bnb_btc_lista_cinco_minutos, cinco)
-            print("atualizar = ", lista)
+
             return lista
 
     def __btc_dez_minutos(self):
 
         dez = self.__btc_base()
-        print("dez = ", dez)
+
         if not self.__bnb_btc_lista_dez_minutos:
             self.__bnb_btc_lista_dez_minutos = dez
             return self.__bnb_btc_lista_dez_minutos
 
         elif self.__bnb_btc_lista_dez_minutos:
             lista = self.atualizar_candle(self.__bnb_btc_lista_dez_minutos, dez)
-            print("atualizar = ", lista)
+
             return lista
 
     def __iniciar_monitor(self):
@@ -132,8 +135,8 @@ class Candle(ModeloCandles):
 
         resultado = {
             "1": self.formatar_resultado(self.__btc_um_minuto()),
-            "5": self.formatar_resultado(self.__bnb_btc_lista_cinco_minutos),
-            "10": self.formatar_resultado(self.__bnb_btc_lista_dez_minutos),
+            "5": self.formatar_resultado(self.__btc_cinco_minutos()),
+            "10": self.formatar_resultado(self.__btc_dez_minutos()),
         }
-        print(resultado)
+
         return resultado
