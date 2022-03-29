@@ -1,9 +1,4 @@
-from datetime import datetime as dt
-from datetime import timedelta
+import random
 
 
-hora_atual = dt.now()
-
-
-hora_final = hora_atual + timedelta(minutes=2)
-print(hora_final.minute)
+print("hash value: %032x" % hash)

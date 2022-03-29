@@ -1,13 +1,8 @@
-from flask import Flask, render_template
+from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
-from sqlalchemy import create_engine
-
-from app.module_one.controllers import *
-from app.module_one.databases.mysql_database import init_db
+from api_flask_criptomoedas.app.entites.candle_controller import *
 
 app = Flask(__name__)
-
-app.config.from_object("config")
 
 db = SQLAlchemy(app)
 

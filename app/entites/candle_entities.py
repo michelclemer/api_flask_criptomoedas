@@ -1,8 +1,8 @@
 import time
-
 import requests
 from datetime import datetime, timedelta
 import threading
+import random
 
 
 class ModeloCandles:
@@ -11,6 +11,9 @@ class ModeloCandles:
         lista["highestBid"] = nova_lista["highestBid"]
         lista["lowestAsk"] = nova_lista["lowestAsk"]
         lista["closed"] = nova_lista["last"]
+
+        if "hash" not in lista.keys():
+            lista["hash"] = random.getrandbits(128)
         return lista
 
     def formatar_resultado(self, lista):
@@ -19,6 +22,7 @@ class ModeloCandles:
             "fechamento": lista["closed"],
             "maximo": lista["highestBid"],
             "minimo": lista["lowestAsk"],
+            "hash": lista["hash"],
         }
         return nova_lista
 
@@ -52,14 +56,20 @@ class Candle(ModeloCandles):
             dt = datetime.now().time().minute
             if dt == um_minuto.minute:
                 um_minuto += timedelta(minutes=1)
-                self.__btc_um_minutos()
+                print("Acabou o tempo")
+                self.__bnb_btc_lista_um_minuto = {}
+                self.__btc_um_minuto()
 
             if dt == cinco_minutos.minute:
                 cinco_minutos += timedelta(minutes=5)
+                self.__bnb_btc_lista_cinco_minutos = {}
                 self.__btc_cinco_minutos()
+
             if dt == dez_minutos.minute:
                 dez_minutos += timedelta(minutes=10)
+                self.__bnb_btc_lista_dez_minutos = {}
                 self.__btc_dez_minutos()
+
             time.sleep(0.5)
 
     def __btc_base(self) -> dict:
@@ -70,40 +80,60 @@ class Candle(ModeloCandles):
             dicionario[key] = btc[key]
         return dicionario
 
-    def __btc_um_minutos(self):
-        um = self.__btc_base()
-        if not self.__bnb_btc_lista_um_minuto:
+    def __btc_um_minuto(self):
 
+        um = self.__btc_base()
+
+        if not self.__bnb_btc_lista_um_minuto:
             self.__bnb_btc_lista_um_minuto = um
             return self.__bnb_btc_lista_um_minuto
 
         elif self.__bnb_btc_lista_um_minuto:
             lista = self.atualizar_candle(self.__bnb_btc_lista_um_minuto, um)
             print("atualizar = ", lista)
+            self.__bnb_btc_lista_um_minuto = lista
             return lista
-        return self.__bnb_btc_lista_um_minuto
 
     def __btc_cinco_minutos(self):
         cinco = self.__btc_base()
-        self.__bnb_btc_lista_cinco_minutos = cinco
+        print("cinco = ", cinco)
+        if not self.__bnb_btc_lista_cinco_minutos:
+            self.__bnb_btc_lista_cinco_minutos = cinco
+            return self.__bnb_btc_lista_cinco_minutos
+
+        elif self.__bnb_btc_lista_cinco_minutos:
+            lista = self.atualizar_candle(self.__bnb_btc_lista_cinco_minutos, cinco)
+            print("atualizar = ", lista)
+            return lista
 
     def __btc_dez_minutos(self):
+
         dez = self.__btc_base()
-        self.__bnb_btc_lista_dez_minutos = dez
+        print("dez = ", dez)
+        if not self.__bnb_btc_lista_dez_minutos:
+            self.__bnb_btc_lista_dez_minutos = dez
+            return self.__bnb_btc_lista_dez_minutos
+
+        elif self.__bnb_btc_lista_dez_minutos:
+            lista = self.atualizar_candle(self.__bnb_btc_lista_dez_minutos, dez)
+            print("atualizar = ", lista)
+            return lista
 
     def __iniciar_monitor(self):
         t1 = threading.Thread(target=self.__monitor_tempo)
         t1.start()
 
     def __iniciar_candles(self):
-        self.__btc_um_minutos()
+        self.__btc_um_minuto()
+        self.__btc_cinco_minutos()
+        self.__btc_dez_minutos()
 
     def retorna_btc(self) -> dict:
 
         resultado = {
-            "1": self.formatar_resultado(self.__btc_um_minutos()),
-            "5": self.__bnb_btc_lista_cinco_minutos,
-            "10": self.__bnb_btc_lista_dez_minutos,
+            "1": self.formatar_resultado(self.__btc_um_minuto()),
+            "5": self.formatar_resultado(self.__bnb_btc_lista_cinco_minutos),
+            "10": self.formatar_resultado(self.__bnb_btc_lista_dez_minutos),
         }
         print(resultado)
         return resultado
