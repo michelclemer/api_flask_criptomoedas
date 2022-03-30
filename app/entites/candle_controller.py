@@ -1,6 +1,8 @@
 from flask import Blueprint, request, jsonify
 from .candle_entities import Candle
 
+
+
 model_candle = Blueprint("candles", __name__, url_prefix="/candles")
 candle_ob = Candle()
 

@@ -37,6 +37,13 @@
   <component name="DBNavigator.Project.DatabaseSessionManager">
     <connection id="d41a4493-6fe1-41cd-936b-254f1aa77731" />
   </component>
+  <component name="DBNavigator.Project.DatasetFilterManager">
+    <filter-actions connection-id="d41a4493-6fe1-41cd-936b-254f1aa77731" dataset="candles.candles" active-filter-id="ef439cce-cefa-47b7-9314-8e8e729a7c29">
+      <filter id="ef439cce-cefa-47b7-9314-8e8e729a7c29" name="0" temporary="false" custom-name="false" type="basic" join-type="AND">
+        <condition column="id" operator="&gt;" value="0" active="true" />
+      </filter>
+    </filter-actions>
+  </component>
   <component name="DBNavigator.Project.EditorStateManager">
     <last-used-providers />
   </component>
