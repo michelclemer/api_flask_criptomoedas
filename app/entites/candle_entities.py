@@ -1,13 +1,19 @@
+import concurrent.futures
 import time
+from concurrent.futures import ThreadPoolExecutor
+from multiprocessing import Process
+
 import requests
 from datetime import datetime, timedelta
 import threading
+import gevent
 import random
 from ..databases.database_config import DatabaseConnection
 
 class ModeloCandles:
 
-    def __init__(self):
+    def __init__(self, moeda):
+        self.moeda = moeda
         self.__db = DatabaseConnection()
 
     def atualizar_candle(self, lista: dict, nova_lista: dict) -> dict:
@@ -23,16 +29,17 @@ class ModeloCandles:
     def formatar_resultado(self, lista):
         print("formatar = ", lista)
 
-        nova_lista = {
-            "abertura": lista["last"],
-            "fechamento": lista["close"],
-            "maximo": lista["highestBid"],
-            "minimo": lista["lowestAsk"],
-            "hash": lista["hash"],
-        }
-        return nova_lista
+        if 'hash' in lista.keys():
+            nova_lista = {
+                "abertura": lista["last"],
+                "fechamento": lista["close"],
+                "maximo": lista["highestBid"],
+                "minimo": lista["lowestAsk"],
+                "hash": lista["hash"],
+            }
+            return nova_lista
 
-    def fechamento_candle(self, lista:dict ):
+    def fechamento_candle(self, lista:dict, periodicidade: int):
         if 'hash' in lista.keys():
             nova_lista = {
                 "open": lista["last"],
@@ -40,14 +47,15 @@ class ModeloCandles:
                 "high": lista["highestBid"],
                 "low": lista["lowestAsk"],
                 "hash": lista["hash"],
-                "moeda": "BTC",
-                "periodicidade": 1
+                "moeda": self.moeda,
+                "periodicidade": periodicidade
             }
             self.__db.insert_candle(nova_lista)
-class Candle(ModeloCandles):
-    def __init__(self):
 
-        super().__init__()
+class Candle(ModeloCandles):
+    def __init__(self, moeda):
+
+        super().__init__(moeda)
         self.__lista_pair = {
             "last": "",
             "lowestAsk": "",
@@ -61,7 +69,7 @@ class Candle(ModeloCandles):
         self.__controle_cinco_minutos = self.__data_atual + timedelta(minutes=5)
         self.__controle_dez_minutos = self.__data_atual + timedelta(minutes=10)
         self.__iniciar_candles()
-        self.__iniciar_monitor()
+
 
     def __buscar_dados(self) -> dict:
         req = requests.session()
@@ -69,40 +77,36 @@ class Candle(ModeloCandles):
 
         return response.json()
 
-    def __monitor_tempo(self) -> None:
+    def __monitor_tempo(self):
         print("Contole extreno = ", self.__controle_um_minuto)
 
         while True:
 
             dt = datetime.now().time().minute
-
-            minuto = self.__controle_um_minuto.minute
-            print(minuto, dt)
-            if dt == minuto:
-                print("tempo 1 minuto = ", minuto)
-                self.fechamento_candle(self.__bnb_btc_lista_um_minuto)
+            print("x ", self.__controle_um_minuto.minute, dt)
+            if dt == self.__controle_um_minuto.minute:
+                self.fechamento_candle(self.__bnb_btc_lista_um_minuto, 1)
+                print("1 Minuto ",self.__bnb_btc_lista_um_minuto)
                 self.__bnb_btc_lista_um_minuto = {}
-                self.__data_atual = datetime.now()
-                proximo = self.__data_atual + timedelta(minutes=1, seconds=2)
-                print("Procimo = ", proximo)
-                self.__controle_um_minuto = proximo
-                minuto = self.__controle_um_minuto.minute
-                print("Dentro if ", minuto)
-            print("fora if ", minuto)
+                self.__controle_um_minuto = datetime.now() + timedelta(minutes=1)
+                self.__btc_um_minuto()
 
             if dt == self.__controle_cinco_minutos.minute:
-                self.__controle_cinco_minutos += timedelta(minutes=5)
+                self.fechamento_candle(self.__bnb_btc_lista_cinco_minutos, 5)
+                print("5 Minutos ", self.__bnb_btc_lista_cinco_minutos)
                 self.__bnb_btc_lista_cinco_minutos = {}
+                self.__controle_cinco_minutos = datetime.now() + timedelta(minutes=5)
                 self.__btc_cinco_minutos()
 
             if dt == self.__controle_dez_minutos.minute:
-                self.__controle_dez_minutos += timedelta(minutes=10)
+                self.fechamento_candle(self.__bnb_btc_lista_dez_minutos, 10)
+                print("10 Minutos ", self.__controle_dez_minutos)
                 self.__bnb_btc_lista_dez_minutos = {}
+                self.__controle_dez_minutos = datetime.now() + timedelta(minutes=10)
                 self.__btc_dez_minutos()
 
-            time.sleep(1)
-
-
+            time.sleep(2)
+            self.__iniciar_candles()
     def __btc_base(self) -> dict:
         btc = self.__buscar_dados()["BTC_ETH"]
         lista = [i for i in self.__lista_pair.keys()]
@@ -151,9 +155,8 @@ class Candle(ModeloCandles):
 
             return lista
 
-    def __iniciar_monitor(self):
-        t1 = threading.Thread(target=self.__monitor_tempo)
-        t1.start()
+    def iniciar_monitor(self):
+        threading.Thread(target=self.__monitor_tempo).start()
 
 
     def __iniciar_candles(self):
@@ -161,6 +164,7 @@ class Candle(ModeloCandles):
         self.__btc_um_minuto()
         self.__btc_cinco_minutos()
         self.__btc_dez_minutos()
+
 
     def retorna_btc(self) -> dict:
 
@@ -171,3 +175,4 @@ class Candle(ModeloCandles):
         }
 
         return resultado
+
