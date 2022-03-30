@@ -1,12 +1,8 @@
-import concurrent.futures
-import time
-from concurrent.futures import ThreadPoolExecutor
-from multiprocessing import Process
 
+import time
 import requests
 from datetime import datetime, timedelta
 import threading
-import gevent
 import random
 from ..databases.database_config import DatabaseConnection
 

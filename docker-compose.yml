@@ -13,11 +13,12 @@ services:
   db:
     image: mysql
     restart: always
+    container_name: db
     environment:
       MYSQL_DATABASE: candles
       MYSQL_USER: newuser
       MYSQL_PASSWORD: password
-      MYSQL_ROOT_PASSWORD: 127001
+      MYSQL_ROOT_PASSWORD: admin
     volumes:
       - .dbdata:/var/lib/mysql
     ports:

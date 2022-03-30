@@ -6,7 +6,7 @@ class DatabaseConnection:
 
     def start_db(self):
         cnx = mysql.connector.connect(user='newuser', password='password',
-                                      host='localhost',
+                                      host='db',
                                       database='candles')
 
         return cnx

@@ -19,9 +19,6 @@ filelock==3.6.0
 Flask==2.0.3
 flask-marshmallow==0.12.0
 Flask-SQLAlchemy==2.5.1
-gevent==20.6.2
-gevent-tasks==0.3.1
-greenlet==0.4.16
 identify==2.4.12
 idna==3.3
 importlib-metadata==4.11.3
@@ -36,17 +33,14 @@ MarkupSafe==2.1.1
 marshmallow==3.15.0
 marshmallow-sqlalchemy==0.28.0
 mypy-extensions==0.4.3
+mysql-connector==2.2.9
 mysql-connector-python==8.0.28
 mysqlclient==2.1.0
 nodeenv==1.6.0
-numpy==1.22.3
 packaging==21.3
-pandas==1.4.1
 pathspec==0.9.0
 platformdirs==2.5.1
 pluggy==1.0.0
-poloniex==0.0.17
-poloniexapi @ git+https://github.com/s4w3d0ff/python-poloniex.git@369b9c1296d78001072001b9ad2d8d726f6f06ef
 pre-commit==2.17.0
 protobuf==3.19.4
 py==1.11.0
