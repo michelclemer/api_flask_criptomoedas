@@ -11,7 +11,7 @@ class DatabaseConnection:
         pass
 
     """ inicia o banco de dados  """
-    def start_db(self)  -> Type[mysql.connector]:
+    def start_db(self)  -> dict:
 
         """
         Iniciar
