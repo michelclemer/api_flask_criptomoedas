@@ -76,3 +76,5 @@ Resultado JSON:
 
 * minimo : Menor preço de compra atual para este ativo.
 
+* Hash : identifica aquele candle em específico. Caso o candle fechar, o valor muda.
+
