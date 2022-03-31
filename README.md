@@ -63,10 +63,10 @@ Resultado JSON:
     ###### A cada 1 minuto o valor do candle fecha 
 * 5 : Candles de 5 minutos.
     
-    ###### A cada 5 minuto o valor do candle fecha 
+    ###### A cada 5 minutos o valor do candle fecha 
 * 10 : Candle de 10 minutos.
 
-    ###### A cada 10 minuto o valor do candle fecha
+    ###### A cada 10 minutos o valor do candle fecha
 
 * abertura : Preço de execução para a negociação mais recente para este par.
 
