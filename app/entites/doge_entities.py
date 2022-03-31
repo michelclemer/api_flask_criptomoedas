@@ -76,7 +76,7 @@ class ModeloCandles:
                 "high": lista["highestBid"],
                 "low": lista["lowestAsk"],
                 "hash": lista["hash"],
-                "moeda": 'doge_ETH',
+                "moeda": 'BTC_DOGE',
                 "periodicidade": periodicidade
             }
             self.__db.insert_candle(nova_lista)

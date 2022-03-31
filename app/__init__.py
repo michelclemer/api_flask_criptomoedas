@@ -1,7 +1,7 @@
-from flask import Flask
 
+from flask import Flask
 from .entites.candle_controller import *
-from app.databases.database_config import DatabaseConnection
+from .databases.database_config import DatabaseConnection
 
 creat_db = DatabaseConnection()
 creat_db.create_table()

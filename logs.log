@@ -1,0 +1,705 @@
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://172.19.0.3:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 626-210-652
+INFO:root:Monitor BTC iniciado
+INFO:root:Monitor DOG iniciado
+DEBUG:root:Data Esperada: 44
+DEBUG:root:Data Esperada: 44
+DEBUG:root:Data Atual: 43
+DEBUG:root:Data Atual: 43
+INFO:werkzeug:172.19.0.1 - - [31/Mar/2022 17:43:38] "GET /candles/btc HTTP/1.1" 200 -
+DEBUG:root:Data Esperada: 44
+DEBUG:root:Data Atual: 43
+DEBUG:root:Data Esperada: 44
+DEBUG:root:Data Atual: 43
+DEBUG:root:Data Esperada: 44
+DEBUG:root:Data Atual: 43
+DEBUG:root:Data Esperada: 44
+DEBUG:root:Data Atual: 43
+DEBUG:root:Data Esperada: 44
+DEBUG:root:Data Atual: 43
+INFO:werkzeug:172.19.0.1 - - [31/Mar/2022 17:43:47] "[33mGET /candles/bts HTTP/1.1[0m" 404 -
+DEBUG:root:Data Esperada: 44
+DEBUG:root:Data Atual: 43
+DEBUG:root:Data Esperada: 44
+DEBUG:root:Data Atual: 43
+DEBUG:root:Data Esperada: 44
+DEBUG:root:Data Atual: 43
+DEBUG:root:Data Esperada: 44
+DEBUG:root:Data Atual: 43
+DEBUG:root:Data Esperada: 44
+DEBUG:root:Data Atual: 43
+INFO:werkzeug:172.19.0.1 - - [31/Mar/2022 17:43:59] "GET /candles/doge HTTP/1.1" 200 -
+DEBUG:root:Data Esperada: 44
+DEBUG:root:Data Atual: 44
+INFO:root:[+] 1 minuto Dados - DOGE inseridos: {'last': '0.00000303', 'lowestAsk': '0.00000304', 'highestBid': '0.00000303', 'close': '0.00000303', 'hash': 225545706482563808790721163118351559364}
+DEBUG:root:[*] 1 minuto esperado atualizado: 45
+DEBUG:root:Data Esperada: 44
+DEBUG:root:Data Atual: 44
+INFO:root:[+] 1 minuto Dados - BTC inseridos: {'last': '0.07189643', 'lowestAsk': '0.07191339', 'highestBid': '0.07188033', 'close': '0.07190165', 'hash': 230815750554792249453742913520232702692}
+DEBUG:root:[*] 1 minuto esperado atualizado: 45
+DEBUG:root:Data Esperada: 45
+DEBUG:root:Data Atual: 44
+DEBUG:root:Data Esperada: 45
+DEBUG:root:Data Atual: 44
+DEBUG:root:Data Esperada: 45
+DEBUG:root:Data Atual: 44
+DEBUG:root:Data Esperada: 45
+DEBUG:root:Data Atual: 44
+DEBUG:root:Data Esperada: 45
+DEBUG:root:Data Atual: 44
+DEBUG:root:Data Esperada: 45
+DEBUG:root:Data Atual: 44
+DEBUG:root:Data Esperada: 45
+DEBUG:root:Data Atual: 44
+DEBUG:root:Data Esperada: 45
+DEBUG:root:Data Atual: 44
+DEBUG:root:Data Esperada: 45
+DEBUG:root:Data Atual: 44
+DEBUG:root:Data Esperada: 45
+DEBUG:root:Data Atual: 44
+DEBUG:root:Data Esperada: 45
+DEBUG:root:Data Atual: 44
+DEBUG:root:Data Esperada: 45
+DEBUG:root:Data Atual: 44
+DEBUG:root:Data Esperada: 45
+DEBUG:root:Data Atual: 44
+DEBUG:root:Data Esperada: 45
+DEBUG:root:Data Atual: 44
+DEBUG:root:Data Esperada: 45
+DEBUG:root:Data Atual: 44
+DEBUG:root:Data Esperada: 45
+DEBUG:root:Data Atual: 44
+DEBUG:root:Data Esperada: 45
+DEBUG:root:Data Atual: 44
+DEBUG:root:Data Esperada: 45
+DEBUG:root:Data Atual: 44
+DEBUG:root:Data Esperada: 45
+DEBUG:root:Data Atual: 44
+DEBUG:root:Data Esperada: 45
+DEBUG:root:Data Atual: 44
+DEBUG:root:Data Esperada: 45
+DEBUG:root:Data Atual: 44
+DEBUG:root:Data Esperada: 45
+DEBUG:root:Data Atual: 44
+DEBUG:root:Data Esperada: 45
+DEBUG:root:Data Atual: 44
+DEBUG:root:Data Esperada: 45
+DEBUG:root:Data Atual: 44
+DEBUG:root:Data Esperada: 45
+DEBUG:root:Data Atual: 44
+DEBUG:root:Data Esperada: 45
+DEBUG:root:Data Atual: 44
+DEBUG:root:Data Esperada: 45
+DEBUG:root:Data Atual: 44
+DEBUG:root:Data Esperada: 45
+DEBUG:root:Data Atual: 45
+INFO:root:[+] 1 minuto Dados - BTC inseridos: {'last': '0.07190165', 'lowestAsk': '0.07190205', 'highestBid': '0.07186243', 'close': '0.07190109', 'hash': 279131170446351330101312548637702438581}
+DEBUG:root:[*] 1 minuto esperado atualizado: 46
+DEBUG:root:Data Esperada: 45
+DEBUG:root:Data Atual: 45
+INFO:root:[+] 1 minuto Dados - DOGE inseridos: {'last': '0.00000303', 'lowestAsk': '0.00000304', 'highestBid': '0.00000303', 'close': '0.00000303', 'hash': 284069903764289051590442335931179829376}
+DEBUG:root:[*] 1 minuto esperado atualizado: 46
+DEBUG:root:Data Esperada: 46
+DEBUG:root:Data Atual: 45
+DEBUG:root:Data Esperada: 46
+DEBUG:root:Data Atual: 45
+DEBUG:root:Data Esperada: 46
+DEBUG:root:Data Atual: 45
+DEBUG:root:Data Esperada: 46
+DEBUG:root:Data Atual: 45
+DEBUG:root:Data Esperada: 46
+DEBUG:root:Data Atual: 45
+DEBUG:root:Data Esperada: 46
+DEBUG:root:Data Atual: 45
+DEBUG:root:Data Esperada: 46
+DEBUG:root:Data Atual: 45
+DEBUG:root:Data Esperada: 46
+DEBUG:root:Data Atual: 45
+DEBUG:root:Data Esperada: 46
+DEBUG:root:Data Atual: 45
+DEBUG:root:Data Esperada: 46
+DEBUG:root:Data Atual: 45
+DEBUG:root:Data Esperada: 46
+DEBUG:root:Data Atual: 45
+DEBUG:root:Data Esperada: 46
+DEBUG:root:Data Atual: 45
+DEBUG:root:Data Esperada: 46
+DEBUG:root:Data Atual: 45
+DEBUG:root:Data Esperada: 46
+DEBUG:root:Data Atual: 45
+DEBUG:root:Data Esperada: 46
+DEBUG:root:Data Atual: 45
+DEBUG:root:Data Esperada: 46
+DEBUG:root:Data Atual: 45
+DEBUG:root:Data Esperada: 46
+DEBUG:root:Data Atual: 45
+DEBUG:root:Data Esperada: 46
+DEBUG:root:Data Atual: 45
+DEBUG:root:Data Esperada: 46
+DEBUG:root:Data Atual: 45
+DEBUG:root:Data Esperada: 46
+DEBUG:root:Data Atual: 45
+DEBUG:root:Data Esperada: 46
+DEBUG:root:Data Atual: 45
+DEBUG:root:Data Esperada: 46
+DEBUG:root:Data Atual: 45
+DEBUG:root:Data Esperada: 46
+DEBUG:root:Data Atual: 45
+DEBUG:root:Data Esperada: 46
+DEBUG:root:Data Atual: 45
+DEBUG:root:Data Esperada: 46
+DEBUG:root:Data Atual: 45
+DEBUG:root:Data Esperada: 46
+DEBUG:root:Data Atual: 45
+DEBUG:root:Data Esperada: 46
+DEBUG:root:Data Atual: 45
+DEBUG:root:Data Esperada: 46
+DEBUG:root:Data Atual: 46
+INFO:root:[+] 1 minuto Dados - BTC inseridos: {'last': '0.07190109', 'lowestAsk': '0.07190716', 'highestBid': '0.07190715', 'close': '0.07190446', 'hash': 77069303034987620077620614371609249795}
+DEBUG:root:[*] 1 minuto esperado atualizado: 47
+DEBUG:root:Data Esperada: 46
+DEBUG:root:Data Atual: 46
+INFO:root:[+] 1 minuto Dados - DOGE inseridos: {'last': '0.00000303', 'lowestAsk': '0.00000304', 'highestBid': '0.00000303', 'close': '0.00000303', 'hash': 218973183570568806848351524031264829215}
+DEBUG:root:[*] 1 minuto esperado atualizado: 47
+DEBUG:root:Data Esperada: 47
+DEBUG:root:Data Atual: 46
+DEBUG:root:Data Esperada: 47
+DEBUG:root:Data Atual: 46
+DEBUG:root:Data Esperada: 47
+DEBUG:root:Data Atual: 46
+DEBUG:root:Data Esperada: 47
+DEBUG:root:Data Atual: 46
+DEBUG:root:Data Esperada: 47
+DEBUG:root:Data Atual: 46
+DEBUG:root:Data Esperada: 47
+DEBUG:root:Data Atual: 46
+DEBUG:root:Data Esperada: 47
+DEBUG:root:Data Atual: 46
+DEBUG:root:Data Esperada: 47
+DEBUG:root:Data Atual: 46
+DEBUG:root:Data Esperada: 47
+DEBUG:root:Data Atual: 46
+DEBUG:root:Data Esperada: 47
+DEBUG:root:Data Atual: 46
+DEBUG:root:Data Esperada: 47
+DEBUG:root:Data Atual: 46
+DEBUG:root:Data Esperada: 47
+DEBUG:root:Data Atual: 46
+DEBUG:root:Data Esperada: 47
+DEBUG:root:Data Atual: 46
+DEBUG:root:Data Esperada: 47
+DEBUG:root:Data Atual: 46
+DEBUG:root:Data Esperada: 47
+DEBUG:root:Data Atual: 46
+DEBUG:root:Data Esperada: 47
+DEBUG:root:Data Atual: 46
+DEBUG:root:Data Esperada: 47
+DEBUG:root:Data Atual: 46
+DEBUG:root:Data Esperada: 47
+DEBUG:root:Data Atual: 46
+DEBUG:root:Data Esperada: 47
+DEBUG:root:Data Atual: 46
+DEBUG:root:Data Esperada: 47
+DEBUG:root:Data Atual: 46
+DEBUG:root:Data Esperada: 47
+DEBUG:root:Data Atual: 46
+DEBUG:root:Data Esperada: 47
+DEBUG:root:Data Atual: 46
+DEBUG:root:Data Esperada: 47
+DEBUG:root:Data Atual: 46
+DEBUG:root:Data Esperada: 47
+DEBUG:root:Data Atual: 46
+DEBUG:root:Data Esperada: 47
+DEBUG:root:Data Atual: 46
+DEBUG:root:Data Esperada: 47
+DEBUG:root:Data Atual: 46
+DEBUG:root:Data Esperada: 47
+DEBUG:root:Data Atual: 46
+DEBUG:root:Data Esperada: 47
+DEBUG:root:Data Atual: 46
+DEBUG:root:Data Esperada: 47
+DEBUG:root:Data Atual: 47
+INFO:root:[+] 1 minuto Dados - BTC inseridos: {'last': '0.07190716', 'lowestAsk': '0.07190715', 'highestBid': '0.07190454', 'close': '0.07190579', 'hash': 9938381201869766673915753747176134789}
+DEBUG:root:[*] 1 minuto esperado atualizado: 48
+DEBUG:root:Data Esperada: 47
+DEBUG:root:Data Atual: 47
+INFO:root:[+] 1 minuto Dados - DOGE inseridos: {'last': '0.00000303', 'lowestAsk': '0.00000304', 'highestBid': '0.00000303', 'close': '0.00000303', 'hash': 106247038874150593977168637814935986046}
+DEBUG:root:[*] 1 minuto esperado atualizado: 48
+DEBUG:root:Data Esperada: 48
+DEBUG:root:Data Atual: 47
+DEBUG:root:Data Esperada: 48
+DEBUG:root:Data Atual: 47
+DEBUG:root:Data Esperada: 48
+DEBUG:root:Data Atual: 47
+DEBUG:root:Data Esperada: 48
+DEBUG:root:Data Atual: 47
+DEBUG:root:Data Esperada: 48
+DEBUG:root:Data Atual: 47
+DEBUG:root:Data Esperada: 48
+DEBUG:root:Data Atual: 47
+DEBUG:root:Data Esperada: 48
+DEBUG:root:Data Atual: 47
+DEBUG:root:Data Esperada: 48
+DEBUG:root:Data Atual: 47
+DEBUG:root:Data Esperada: 48
+DEBUG:root:Data Atual: 47
+DEBUG:root:Data Esperada: 48
+DEBUG:root:Data Atual: 47
+DEBUG:root:Data Esperada: 48
+DEBUG:root:Data Atual: 47
+DEBUG:root:Data Esperada: 48
+DEBUG:root:Data Atual: 47
+DEBUG:root:Data Esperada: 48
+DEBUG:root:Data Atual: 47
+DEBUG:root:Data Esperada: 48
+DEBUG:root:Data Atual: 47
+DEBUG:root:Data Esperada: 48
+DEBUG:root:Data Atual: 47
+DEBUG:root:Data Esperada: 48
+DEBUG:root:Data Atual: 47
+DEBUG:root:Data Esperada: 48
+DEBUG:root:Data Atual: 47
+DEBUG:root:Data Esperada: 48
+DEBUG:root:Data Atual: 47
+DEBUG:root:Data Esperada: 48
+DEBUG:root:Data Atual: 47
+DEBUG:root:Data Esperada: 48
+DEBUG:root:Data Atual: 47
+DEBUG:root:Data Esperada: 48
+DEBUG:root:Data Atual: 47
+DEBUG:root:Data Esperada: 48
+DEBUG:root:Data Atual: 47
+INFO:werkzeug: * Detected change in '/app/app/models/conn.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://172.19.0.3:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 626-210-652
+INFO:root:Monitor BTC iniciado
+INFO:root:Monitor DOG iniciado
+DEBUG:root:Data Esperada: 54
+DEBUG:root:Data Esperada: 54
+DEBUG:root:Data Atual: 59
+DEBUG:root:Data Atual: 59
+INFO:werkzeug:172.19.0.1 - - [31/Mar/2022 17:59:28] "GET /candles/doge HTTP/1.1" 200 -
+DEBUG:root:Data Esperada: 54
+DEBUG:root:Data Atual: 59
+DEBUG:root:Data Esperada: 54
+DEBUG:root:Data Atual: 59
+INFO:werkzeug:172.19.0.1 - - [31/Mar/2022 17:59:29] "GET /candles/btc HTTP/1.1" 200 -
+DEBUG:root:Data Esperada: 54
+DEBUG:root:Data Atual: 59
+DEBUG:root:Data Esperada: 54
+DEBUG:root:Data Atual: 59
+DEBUG:root:Data Esperada: 54
+DEBUG:root:Data Atual: 59
+DEBUG:root:Data Esperada: 54
+DEBUG:root:Data Atual: 59
+DEBUG:root:Data Esperada: 54
+DEBUG:root:Data Atual: 59
+DEBUG:root:Data Esperada: 54
+DEBUG:root:Data Atual: 59
+DEBUG:root:Data Esperada: 54
+DEBUG:root:Data Atual: 59
+DEBUG:root:Data Esperada: 54
+DEBUG:root:Data Atual: 59
+DEBUG:root:Data Esperada: 54
+DEBUG:root:Data Atual: 59
+DEBUG:root:Data Esperada: 54
+DEBUG:root:Data Atual: 59
+DEBUG:root:Data Esperada: 54
+DEBUG:root:Data Atual: 59
+DEBUG:root:Data Esperada: 54
+DEBUG:root:Data Atual: 59
+DEBUG:root:Data Esperada: 54
+DEBUG:root:Data Atual: 59
+DEBUG:root:Data Esperada: 54
+DEBUG:root:Data Atual: 59
+DEBUG:root:Data Esperada: 54
+DEBUG:root:Data Atual: 59
+DEBUG:root:Data Esperada: 54
+DEBUG:root:Data Atual: 0
+DEBUG:root:Data Esperada: 54
+DEBUG:root:Data Atual: 0
+DEBUG:root:Data Esperada: 54
+DEBUG:root:Data Atual: 0
+DEBUG:root:Data Esperada: 54
+DEBUG:root:Data Atual: 0
+DEBUG:root:Data Esperada: 54
+DEBUG:root:Data Atual: 0
+DEBUG:root:Data Esperada: 54
+DEBUG:root:Data Atual: 0
+DEBUG:root:Data Esperada: 54
+DEBUG:root:Data Atual: 0
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://172.19.0.3:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 626-210-652
+INFO:root:Monitor BTC iniciado
+INFO:root:Monitor DOG iniciado
+DEBUG:root:Data Esperada: 5
+DEBUG:root:Data Esperada: 5
+DEBUG:root:Data Atual: 4
+DEBUG:root:Data Atual: 4
+INFO:werkzeug:172.19.0.1 - - [31/Mar/2022 18:04:57] "[35m[1mGET /candles/btc HTTP/1.1[0m" 500 -
+INFO:werkzeug:172.19.0.1 - - [31/Mar/2022 18:04:57] "GET /candles/btc?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+INFO:werkzeug:172.19.0.1 - - [31/Mar/2022 18:04:57] "GET /candles/btc?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+INFO:werkzeug:172.19.0.1 - - [31/Mar/2022 18:04:57] "GET /candles/btc?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1" 200 -
+INFO:werkzeug:172.19.0.1 - - [31/Mar/2022 18:04:58] "GET /candles/btc?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO:werkzeug:172.19.0.1 - - [31/Mar/2022 18:04:58] "GET /candles/btc?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+DEBUG:root:Data Esperada: 5
+DEBUG:root:Data Atual: 5
+INFO:root:[+] 1 minuto Dados - DOGE inseridos: {'last': '0.00000303', 'lowestAsk': '0.00000304', 'highestBid': '0.00000302', 'close': '0.00000303', 'hash': 328104786118847474962434375206342013772}
+DEBUG:root:[*] 1 minuto esperado atualizado: 6
+DEBUG:root:Data Esperada: 6
+DEBUG:root:Data Atual: 5
+DEBUG:root:Data Esperada: 6
+DEBUG:root:Data Atual: 5
+INFO:werkzeug: * Detected change in '/app/app/entites/btc_entities.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://172.19.0.3:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 626-210-652
+INFO:root:Monitor BTC iniciado
+INFO:root:Monitor DOG iniciado
+DEBUG:root:Data Esperada: 6
+DEBUG:root:Data Esperada: 6
+DEBUG:root:Data Atual: 6
+DEBUG:root:Data Atual: 6
+INFO:root:[+] 1 minuto Dados - BTC inseridos: {'last': '0.07181556', 'lowestAsk': '0.07181556', 'highestBid': '0.07180812'}
+DEBUG:root:[*] 1 minuto esperado atualizado: 7
+INFO:root:[+] 1 minuto Dados - DOGE inseridos: {'last': '0.00000303', 'lowestAsk': '0.00000304', 'highestBid': '0.00000302'}
+DEBUG:root:[*] 1 minuto esperado atualizado: 7
+INFO:werkzeug:172.19.0.1 - - [31/Mar/2022 18:06:15] "GET /candles/doge HTTP/1.1" 200 -
+INFO:werkzeug:172.19.0.1 - - [31/Mar/2022 18:06:15] "GET /candles/btc HTTP/1.1" 200 -
+DEBUG:root:Data Esperada: 7
+DEBUG:root:Data Atual: 6
+DEBUG:root:Data Esperada: 7
+DEBUG:root:Data Atual: 6
+DEBUG:root:Data Esperada: 7
+DEBUG:root:Data Atual: 6
+DEBUG:root:Data Esperada: 7
+DEBUG:root:Data Atual: 6
+DEBUG:root:Data Esperada: 7
+DEBUG:root:Data Atual: 6
+DEBUG:root:Data Esperada: 7
+DEBUG:root:Data Atual: 6
+DEBUG:root:Data Esperada: 7
+DEBUG:root:Data Atual: 6
+DEBUG:root:Data Esperada: 7
+DEBUG:root:Data Atual: 6
+DEBUG:root:Data Esperada: 7
+DEBUG:root:Data Atual: 6
+DEBUG:root:Data Esperada: 7
+DEBUG:root:Data Atual: 6
+DEBUG:root:Data Esperada: 7
+DEBUG:root:Data Atual: 6
+DEBUG:root:Data Esperada: 7
+DEBUG:root:Data Atual: 6
+DEBUG:root:Data Esperada: 7
+DEBUG:root:Data Atual: 6
+DEBUG:root:Data Esperada: 7
+DEBUG:root:Data Atual: 7
+INFO:root:[+] 1 minuto Dados - DOGE inseridos: {'last': '0.00000303', 'lowestAsk': '0.00000303', 'highestBid': '0.00000302', 'close': '0.00000303', 'hash': 193153052787539613686264000394803420619}
+DEBUG:root:[*] 1 minuto esperado atualizado: 8
+DEBUG:root:Data Esperada: 8
+DEBUG:root:Data Atual: 7
+DEBUG:root:Data Esperada: 8
+DEBUG:root:Data Atual: 7
+DEBUG:root:Data Esperada: 8
+DEBUG:root:Data Atual: 7
+DEBUG:root:Data Esperada: 8
+DEBUG:root:Data Atual: 7
+DEBUG:root:Data Esperada: 8
+DEBUG:root:Data Atual: 7
+DEBUG:root:Data Esperada: 8
+DEBUG:root:Data Atual: 7
+DEBUG:root:Data Esperada: 8
+DEBUG:root:Data Atual: 7
+DEBUG:root:Data Esperada: 8
+DEBUG:root:Data Atual: 7
+DEBUG:root:Data Esperada: 8
+DEBUG:root:Data Atual: 7
+DEBUG:root:Data Esperada: 8
+DEBUG:root:Data Atual: 7
+DEBUG:root:Data Esperada: 8
+DEBUG:root:Data Atual: 7
+DEBUG:root:Data Esperada: 8
+DEBUG:root:Data Atual: 7
+DEBUG:root:Data Esperada: 8
+DEBUG:root:Data Atual: 7
+DEBUG:root:Data Esperada: 8
+DEBUG:root:Data Atual: 8
+INFO:root:[+] 1 minuto Dados - DOGE inseridos: {'last': '0.00000303', 'lowestAsk': '0.00000303', 'highestBid': '0.00000302', 'close': '0.00000303', 'hash': 82582746024665661232304458262560475690}
+DEBUG:root:[*] 1 minuto esperado atualizado: 9
+DEBUG:root:Data Esperada: 9
+DEBUG:root:Data Atual: 8
+DEBUG:root:Data Esperada: 9
+DEBUG:root:Data Atual: 8
+DEBUG:root:Data Esperada: 9
+DEBUG:root:Data Atual: 8
+DEBUG:root:Data Esperada: 9
+DEBUG:root:Data Atual: 8
+DEBUG:root:Data Esperada: 9
+DEBUG:root:Data Atual: 8
+DEBUG:root:Data Esperada: 9
+DEBUG:root:Data Atual: 8
+DEBUG:root:Data Esperada: 9
+DEBUG:root:Data Atual: 8
+DEBUG:root:Data Esperada: 9
+DEBUG:root:Data Atual: 8
+INFO:werkzeug:172.19.0.1 - - [31/Mar/2022 18:11:04] "GET /candles/btc HTTP/1.1" 200 -
+INFO:werkzeug:172.19.0.1 - - [31/Mar/2022 18:11:05] "GET /candles/doge HTTP/1.1" 200 -
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://172.19.0.3:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 626-210-652
+INFO:root:Monitor BTC iniciado
+INFO:root:Monitor DOG iniciado
+DEBUG:root:Data Esperada: 37
+DEBUG:root:Data Atual: 36
+DEBUG:root:Data Esperada: 37
+DEBUG:root:Data Atual: 36
+INFO:werkzeug:172.19.0.1 - - [31/Mar/2022 18:37:00] "GET /candles/btc HTTP/1.1" 200 -
+INFO:werkzeug:172.19.0.1 - - [31/Mar/2022 18:37:01] "GET /candles/doge HTTP/1.1" 200 -
+DEBUG:root:Data Esperada: 37
+DEBUG:root:Data Atual: 37
+INFO:root:[+] 1 minuto Dados - BTC inseridos: {'last': '0.07177960', 'lowestAsk': '0.07177241', 'highestBid': '0.07177240', 'close': '0.07176965', 'hash': 107301659670828428597446990432602637109}
+DEBUG:root:[*] 1 minuto esperado atualizado: 38
+DEBUG:root:Data Esperada: 37
+DEBUG:root:Data Atual: 37
+INFO:root:[+] 1 minuto Dados - DOGE inseridos: {'last': '0.00000303', 'lowestAsk': '0.00000303', 'highestBid': '0.00000302', 'close': '0.00000303', 'hash': 51405462407721058745991205357505297372}
+DEBUG:root:[*] 1 minuto esperado atualizado: 38
+DEBUG:root:Data Esperada: 38
+DEBUG:root:Data Atual: 37
+DEBUG:root:Data Esperada: 38
+DEBUG:root:Data Atual: 37
+DEBUG:root:Data Esperada: 38
+DEBUG:root:Data Atual: 37
+DEBUG:root:Data Esperada: 38
+DEBUG:root:Data Atual: 37
+DEBUG:root:Data Esperada: 38
+DEBUG:root:Data Atual: 37
+DEBUG:root:Data Esperada: 38
+DEBUG:root:Data Atual: 37
+DEBUG:root:Data Esperada: 38
+DEBUG:root:Data Atual: 37
+DEBUG:root:Data Esperada: 38
+DEBUG:root:Data Atual: 37
+DEBUG:root:Data Esperada: 38
+DEBUG:root:Data Atual: 37
+DEBUG:root:Data Esperada: 38
+DEBUG:root:Data Atual: 37
+DEBUG:root:Data Esperada: 38
+DEBUG:root:Data Atual: 37
+DEBUG:root:Data Esperada: 38
+DEBUG:root:Data Atual: 37
+DEBUG:root:Data Esperada: 38
+DEBUG:root:Data Atual: 37
+DEBUG:root:Data Esperada: 38
+DEBUG:root:Data Atual: 37
+DEBUG:root:Data Esperada: 38
+DEBUG:root:Data Atual: 37
+DEBUG:root:Data Esperada: 38
+DEBUG:root:Data Atual: 37
+DEBUG:root:Data Esperada: 38
+DEBUG:root:Data Atual: 37
+DEBUG:root:Data Esperada: 38
+DEBUG:root:Data Atual: 37
+DEBUG:root:Data Esperada: 38
+DEBUG:root:Data Atual: 37
+DEBUG:root:Data Esperada: 38
+DEBUG:root:Data Atual: 37
+DEBUG:root:Data Esperada: 38
+DEBUG:root:Data Atual: 37
+DEBUG:root:Data Esperada: 38
+DEBUG:root:Data Atual: 37
+DEBUG:root:Data Esperada: 38
+DEBUG:root:Data Atual: 37
+DEBUG:root:Data Esperada: 38
+DEBUG:root:Data Atual: 37
+DEBUG:root:Data Esperada: 38
+DEBUG:root:Data Atual: 37
+DEBUG:root:Data Esperada: 38
+DEBUG:root:Data Atual: 37
+DEBUG:root:Data Esperada: 38
+DEBUG:root:Data Atual: 37
+DEBUG:root:Data Esperada: 38
+DEBUG:root:Data Atual: 38
+INFO:root:[+] 1 minuto Dados - BTC inseridos: {'last': '0.07176965', 'lowestAsk': '0.07181074', 'highestBid': '0.07180554', 'close': '0.07180988', 'hash': 297983440161667524264068767897928354804}
+DEBUG:root:[*] 1 minuto esperado atualizado: 39
+DEBUG:root:Data Esperada: 38
+DEBUG:root:Data Atual: 38
+INFO:root:[+] 1 minuto Dados - DOGE inseridos: {'last': '0.00000303', 'lowestAsk': '0.00000303', 'highestBid': '0.00000302', 'close': '0.00000303', 'hash': 130725414825415618824934884770380733629}
+DEBUG:root:[*] 1 minuto esperado atualizado: 39
+DEBUG:root:Data Esperada: 39
+DEBUG:root:Data Atual: 38
+DEBUG:root:Data Esperada: 39
+DEBUG:root:Data Atual: 38
+DEBUG:root:Data Esperada: 39
+DEBUG:root:Data Atual: 38
+DEBUG:root:Data Esperada: 39
+DEBUG:root:Data Atual: 38
+DEBUG:root:Data Esperada: 39
+DEBUG:root:Data Atual: 38
+DEBUG:root:Data Esperada: 39
+DEBUG:root:Data Atual: 38
+DEBUG:root:Data Esperada: 39
+DEBUG:root:Data Atual: 38
+DEBUG:root:Data Esperada: 39
+DEBUG:root:Data Atual: 38
+DEBUG:root:Data Esperada: 39
+DEBUG:root:Data Atual: 38
+DEBUG:root:Data Esperada: 39
+DEBUG:root:Data Atual: 38
+DEBUG:root:Data Esperada: 39
+DEBUG:root:Data Atual: 38
+DEBUG:root:Data Esperada: 39
+DEBUG:root:Data Atual: 38
+DEBUG:root:Data Esperada: 39
+DEBUG:root:Data Atual: 38
+DEBUG:root:Data Esperada: 39
+DEBUG:root:Data Atual: 38
+DEBUG:root:Data Esperada: 39
+DEBUG:root:Data Atual: 38
+DEBUG:root:Data Esperada: 39
+DEBUG:root:Data Atual: 38
+DEBUG:root:Data Esperada: 39
+DEBUG:root:Data Atual: 38
+DEBUG:root:Data Esperada: 39
+DEBUG:root:Data Atual: 38
+DEBUG:root:Data Esperada: 39
+DEBUG:root:Data Atual: 38
+DEBUG:root:Data Esperada: 39
+DEBUG:root:Data Atual: 38
+DEBUG:root:Data Esperada: 39
+DEBUG:root:Data Atual: 38
+DEBUG:root:Data Esperada: 39
+DEBUG:root:Data Atual: 38
+DEBUG:root:Data Esperada: 39
+DEBUG:root:Data Atual: 38
+DEBUG:root:Data Esperada: 39
+DEBUG:root:Data Atual: 38
+DEBUG:root:Data Esperada: 39
+DEBUG:root:Data Atual: 38
+DEBUG:root:Data Esperada: 39
+DEBUG:root:Data Atual: 38
+DEBUG:root:Data Esperada: 39
+DEBUG:root:Data Atual: 38
+DEBUG:root:Data Esperada: 39
+DEBUG:root:Data Atual: 38
+DEBUG:root:Data Esperada: 39
+DEBUG:root:Data Atual: 38
+DEBUG:root:Data Esperada: 39
+DEBUG:root:Data Atual: 39
+INFO:root:[+] 1 minuto Dados - BTC inseridos: {'last': '0.07180819', 'lowestAsk': '0.07173572', 'highestBid': '0.07173416', 'close': '0.07173572', 'hash': 16191344647056848969279335527966628811}
+DEBUG:root:[*] 1 minuto esperado atualizado: 40
+DEBUG:root:Data Esperada: 39
+DEBUG:root:Data Atual: 39
+INFO:root:[+] 1 minuto Dados - DOGE inseridos: {'last': '0.00000303', 'lowestAsk': '0.00000303', 'highestBid': '0.00000302', 'close': '0.00000303', 'hash': 93708413090288618141032046814642832893}
+DEBUG:root:[*] 1 minuto esperado atualizado: 40
+DEBUG:root:Data Esperada: 40
+DEBUG:root:Data Atual: 39
+DEBUG:root:Data Esperada: 40
+DEBUG:root:Data Atual: 39
+DEBUG:root:Data Esperada: 40
+DEBUG:root:Data Atual: 39
+DEBUG:root:Data Esperada: 40
+DEBUG:root:Data Atual: 39
+DEBUG:root:Data Esperada: 40
+DEBUG:root:Data Atual: 39
+DEBUG:root:Data Esperada: 40
+DEBUG:root:Data Atual: 39
+DEBUG:root:Data Esperada: 40
+DEBUG:root:Data Atual: 39
+DEBUG:root:Data Esperada: 40
+DEBUG:root:Data Atual: 39
+DEBUG:root:Data Esperada: 40
+DEBUG:root:Data Atual: 39
+DEBUG:root:Data Esperada: 40
+DEBUG:root:Data Atual: 39
+DEBUG:root:Data Esperada: 40
+DEBUG:root:Data Atual: 39
+DEBUG:root:Data Esperada: 40
+DEBUG:root:Data Atual: 39
+DEBUG:root:Data Esperada: 40
+DEBUG:root:Data Atual: 39
+DEBUG:root:Data Esperada: 40
+DEBUG:root:Data Atual: 39
+DEBUG:root:Data Esperada: 40
+DEBUG:root:Data Atual: 39
+DEBUG:root:Data Esperada: 40
+DEBUG:root:Data Atual: 39
+DEBUG:root:Data Esperada: 40
+DEBUG:root:Data Atual: 39
+DEBUG:root:Data Esperada: 40
+DEBUG:root:Data Atual: 39
+DEBUG:root:Data Esperada: 40
+DEBUG:root:Data Atual: 39
+DEBUG:root:Data Esperada: 40
+DEBUG:root:Data Atual: 39
+DEBUG:root:Data Esperada: 40
+DEBUG:root:Data Atual: 39
+DEBUG:root:Data Esperada: 40
+DEBUG:root:Data Atual: 39
+DEBUG:root:Data Esperada: 40
+DEBUG:root:Data Atual: 39
+DEBUG:root:Data Esperada: 40
+DEBUG:root:Data Atual: 39
+DEBUG:root:Data Esperada: 40
+DEBUG:root:Data Atual: 39
+DEBUG:root:Data Esperada: 40
+DEBUG:root:Data Atual: 39
+DEBUG:root:Data Esperada: 40
+DEBUG:root:Data Atual: 39
+DEBUG:root:Data Esperada: 40
+DEBUG:root:Data Atual: 39
+DEBUG:root:Data Esperada: 40
+DEBUG:root:Data Atual: 39
+DEBUG:root:Data Esperada: 40
+DEBUG:root:Data Atual: 40
+INFO:root:[+] 1 minuto Dados - DOGE inseridos: {'last': '0.00000303', 'lowestAsk': '0.00000303', 'highestBid': '0.00000302', 'close': '0.00000303', 'hash': 115741669209234513504889016181911010486}
+DEBUG:root:[*] 1 minuto esperado atualizado: 41
+DEBUG:root:Data Esperada: 40
+DEBUG:root:Data Atual: 40
+INFO:root:[+] 1 minuto Dados - BTC inseridos: {'last': '0.07173572', 'lowestAsk': '0.07176327', 'highestBid': '0.07174938', 'close': '0.07174219', 'hash': 158294367323659520101452610494557582859}
+DEBUG:root:[*] 1 minuto esperado atualizado: 41
+DEBUG:root:Data Esperada: 41
+DEBUG:root:Data Atual: 40
+DEBUG:root:Data Esperada: 41
+DEBUG:root:Data Atual: 40
+DEBUG:root:Data Esperada: 41
+DEBUG:root:Data Atual: 40
+DEBUG:root:Data Esperada: 41
+DEBUG:root:Data Atual: 40
+DEBUG:root:Data Esperada: 41
+DEBUG:root:Data Atual: 40
+DEBUG:root:Data Esperada: 41
+DEBUG:root:Data Atual: 40
+DEBUG:root:Data Esperada: 41
+DEBUG:root:Data Atual: 40
+DEBUG:root:Data Esperada: 41
+DEBUG:root:Data Atual: 40
+DEBUG:root:Data Esperada: 41
+DEBUG:root:Data Atual: 40
+DEBUG:root:Data Esperada: 41
+DEBUG:root:Data Atual: 40
+DEBUG:root:Data Esperada: 41
+DEBUG:root:Data Atual: 40
+DEBUG:root:Data Esperada: 41
+DEBUG:root:Data Atual: 40
+DEBUG:root:Data Esperada: 41
+DEBUG:root:Data Atual: 40
