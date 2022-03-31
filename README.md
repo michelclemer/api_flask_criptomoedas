@@ -1,11 +1,11 @@
-#Flask API para Poloniex
+# Flask API para Poloniex
 
-###Poloniex ->  ``https://docs.poloniex.com/#returnticker``
+### Poloniex ->  ``https://docs.poloniex.com/#returnticker``
 
 Dados os preços de execução (cotações) de uma criptomoeda reportados em tempo real
 através de uma API pública.
 
-#Dependencies
+# Dependencies
 Python - Programming Language
 
 Flask - The framework used
@@ -26,12 +26,12 @@ Docker
 
 ``$ pip install Flask``
 
-##Instalando as dependencias usando:
+## Instalando as dependencias usando:
 
 ``$ pip install -r requirements.txt``
 
 
-#Iniciando:
+# Iniciando:
 
 ``docker-compuse up --build``
 
@@ -47,7 +47,7 @@ Docker
 
 
 
-##Respostas api:
+## Respostas api:
 
 imagem aqui
 
