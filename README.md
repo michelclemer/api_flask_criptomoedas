@@ -33,7 +33,7 @@ Docker
 
 # Iniciando sem o docker:
 
-```python run.py``
+``python run.py``
 
 # Iniciando com docker:
 
