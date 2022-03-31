@@ -3,6 +3,9 @@ from abc import ABC,abstractmethod
 
 class Moeda(ABC):
 
+    """
+        Classe que será implementada caso precise criar mais de uma moeda
+    """
 
     @abstractmethod
     def monitor_tempo(self):

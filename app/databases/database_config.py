@@ -1,11 +1,22 @@
 import mysql.connector
+from typing import Type
 
 class DatabaseConnection:
+
+    """
+        Gerenciamento do banco de dados
+    """
+
     def __init__(self):
         pass
 
-    def start_db(self):
-        #alterar host antes de iniciar a aplicacao
+    """ inicia o banco de dados  """
+    def start_db(self)  -> Type[mysql.connector]:
+
+        """
+        Iniciar
+        :return: connector
+        """
 
         cnx = mysql.connector.connect(user='newuser', password='password',
                                       host='db',
@@ -13,7 +24,12 @@ class DatabaseConnection:
 
         return cnx
 
-    def create_table(self):
+    """ Cria uma nova tabela """
+    def create_table(self) -> None:
+        """
+        Criar
+        :return: None
+        """
         conn = self.start_db()
         cursor = conn.cursor()
         try:
@@ -39,9 +55,14 @@ class DatabaseConnection:
             pass
         cursor.close()
         conn.close()
-        return
 
-    def insert_candle(self, lista: dict):
+    """ Insere um novo candle ao banco de dados """
+    def insert_candle(self, lista: dict) -> None:
+        """
+        Inserir
+        :param lista:
+        :return: None
+        """
         conn = self.start_db()
 
         sql = ('INSERT INTO `candles` (`moeda`, `periodicidade`, `open`, `low`, `high`, `close`, `hash`) VALUES (%s, %s, %s, %s, %s, %s, %s)')
@@ -50,6 +71,5 @@ class DatabaseConnection:
         with conn.cursor() as cursor:
             cursor.execute(sql, val)
             conn.commit()
-            print("Inserido ok")
         conn.close()
 

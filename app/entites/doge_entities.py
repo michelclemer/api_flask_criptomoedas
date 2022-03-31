@@ -8,8 +8,8 @@ from ..interfaces.moedas import Moeda
 from ..databases.database_config import DatabaseConnection
 from ..models.conn import RequestData
 
-class ModeloCandles:
 
+class ModeloCandles:
     """
         Contém os métodos para manipular os candles
     """
@@ -19,6 +19,7 @@ class ModeloCandles:
         self.__db = DatabaseConnection()
 
     """ Atualiza as listas """
+
     def atualizar_candle(self, lista: dict, nova_lista: dict) -> dict:
 
         """
@@ -37,11 +38,12 @@ class ModeloCandles:
         return lista
 
     """ Formata os dados para serem retornados na página"""
+
     def formatar_resultado(self, lista: dict) -> dict:
 
         """
         Formata
-        :param lista: Lista que será formata, traduzindo os dados para pt-br
+        :param lista: Lista que será formata, traduzindo os dados para pt-br 
         :return:  Lista com chaves traduzidas
         """
 
@@ -57,7 +59,8 @@ class ModeloCandles:
         return lista
 
     """ Realiza o fechamento daquela moeda em especifico, inserindo ao banco de dados"""
-    def fechamento_candle(self, lista:dict, periodicidade: int) -> None:
+
+    def fechamento_candle(self, lista: dict, periodicidade: int) -> None:
 
         """
         Fechamento
@@ -73,15 +76,15 @@ class ModeloCandles:
                 "high": lista["highestBid"],
                 "low": lista["lowestAsk"],
                 "hash": lista["hash"],
-                "moeda": 'BTC_ETH',
+                "moeda": 'doge_ETH',
                 "periodicidade": periodicidade
             }
             self.__db.insert_candle(nova_lista)
 
-class BtcEntities(Moeda):
 
+class DogeEntities(Moeda):
     """
-        Responsável pela gerenciamento da moeda BTC
+        Responsável pela gerenciamento da moeda DOGE
     """
 
     def __init__(self):
@@ -90,9 +93,9 @@ class BtcEntities(Moeda):
         logging.getLogger("urllib3").setLevel(logging.WARNING)
         self.modelo_moeda = ModeloCandles()
         self.conn_data = RequestData()
-        self.__btc_btc_lista_um_minuto = {}
-        self.__btc_btc_lista_cinco_minutos = {}
-        self.__btc_btc_lista_dez_minutos = {}
+        self.__doge_doge_lista_um_minuto = {}
+        self.__doge_doge_lista_cinco_minutos = {}
+        self.__doge_doge_lista_dez_minutos = {}
         self.__data_atual = datetime.now()
         self.__controle_um_minuto = self.__data_atual + timedelta(minutes=1)
         self.__controle_cinco_minutos = self.__data_atual + timedelta(minutes=5)
@@ -100,13 +103,14 @@ class BtcEntities(Moeda):
         self.inicar_moedas()
 
     """ Realiza o monitoramento dos candles a cada 2 segundo """
+
     def monitor_tempo(self) -> None:
         """
         Monitor
-        :return: None
+        :return: None 
         """
 
-        logging.info('Monitor BTC iniciado')
+        logging.info('Monitor DOG iniciado')
 
         while True:
 
@@ -114,25 +118,25 @@ class BtcEntities(Moeda):
             logging.debug("Data Esperada: %s", self.__controle_um_minuto.minute)
             logging.debug("Data Atual: %s", dt)
             if dt == self.__controle_um_minuto.minute:
-                self.modelo_moeda.fechamento_candle(self.__btc_btc_lista_um_minuto, 1)
-                logging.info("[+] 1 minuto Dados - BTC inseridos: %s", self.__btc_btc_lista_um_minuto)
-                self.__btc_btc_lista_um_minuto = {}
+                self.modelo_moeda.fechamento_candle(self.__doge_doge_lista_um_minuto, 1)
+                logging.info("[+] 1 minuto Dados - DOGE inseridos: %s", self.__doge_doge_lista_um_minuto)
+                self.__doge_doge_lista_um_minuto = {}
                 self.__controle_um_minuto = datetime.now() + timedelta(minutes=1)
                 logging.debug("[*] 1 minuto esperado atualizado: %s", self.__controle_um_minuto.minute)
                 self.moeda_um_minuto()
 
             if dt == self.__controle_cinco_minutos.minute:
-                self.modelo_moeda.fechamento_candle(self.__btc_btc_lista_cinco_minutos, 5)
-                logging.info("[+] 5 minutos Dados - BTC inseridos: %s", self.__btc_btc_lista_cinco_minutos)
-                self.__btc_btc_lista_cinco_minutos = {}
+                self.modelo_moeda.fechamento_candle(self.__doge_doge_lista_cinco_minutos, 5)
+                logging.info("[+] 5 minutos Dados - DOGE inseridos: %s", self.__doge_doge_lista_cinco_minutos)
+                self.__doge_doge_lista_cinco_minutos = {}
                 self.__controle_cinco_minutos = datetime.now() + timedelta(minutes=5)
                 logging.debug("[*] 5 minutos esperado atualizado: %s", self.__controle_cinco_minutos.minute)
                 self.moeda_cinco_minutos()
 
             if dt == self.__controle_dez_minutos.minute:
-                self.modelo_moeda.fechamento_candle(self.__btc_btc_lista_dez_minutos, 10)
-                logging.info("[+] 10 minutos Dados - BTC inseridos: %s", self.__btc_btc_lista_cinco_minutos)
-                self.__btc_btc_lista_dez_minutos = {}
+                self.modelo_moeda.fechamento_candle(self.__doge_doge_lista_dez_minutos, 10)
+                logging.info("[+] 10 minutos Dados - DOGE inseridos: %s", self.__doge_doge_lista_cinco_minutos)
+                self.__doge_doge_lista_dez_minutos = {}
                 self.__controle_dez_minutos = datetime.now() + timedelta(minutes=10)
                 logging.debug("[*] 10 minutos esperado atualizado: %s", self.__controle_cinco_minutos.minute)
                 self.moeda_dez_minutos()
@@ -141,67 +145,72 @@ class BtcEntities(Moeda):
             self.inicar_moedas()
 
     """ Faz uma nova requisição para atualiar o valor para o canbdle de 1 minuto """
+
     def moeda_um_minuto(self) -> dict:
 
         """
         Atualiza candle 1 minuto
         :return: dict
         """
-        um = self.conn_data.moeda_base('BTC_ETH')
+        um = self.conn_data.moeda_base('BTC_DOGE')
 
-        if not self.__btc_btc_lista_um_minuto:
-            self.__btc_btc_lista_um_minuto = um
-            return self.__btc_btc_lista_um_minuto
+        if not self.__doge_doge_lista_um_minuto:
+            self.__doge_doge_lista_um_minuto = um
+            return self.__doge_doge_lista_um_minuto
 
-        elif self.__btc_btc_lista_um_minuto:
-            lista = self.modelo_moeda.atualizar_candle(self.__btc_btc_lista_um_minuto, um)
+        elif self.__doge_doge_lista_um_minuto:
+            lista = self.modelo_moeda.atualizar_candle(self.__doge_doge_lista_um_minuto, um)
 
-            self.__btc_btc_lista_um_minuto = lista
+            self.__doge_doge_lista_um_minuto = lista
             return lista
         return {}
 
     """ Faz uma nova requisição para atualiar o valor para o canbdle de 5 minuto """
+
     def moeda_cinco_minutos(self) -> dict:
 
         """
         Atualiza candle 1 minuto
         :return: dict
         """
-        cinco = self.conn_data.moeda_base('BTC_ETH')
+        cinco = self.conn_data.moeda_base('BTC_DOGE')
 
-        if not self.__btc_btc_lista_cinco_minutos:
-            self.__btc_btc_lista_cinco_minutos = cinco
-            return self.__btc_btc_lista_cinco_minutos
+        if not self.__doge_doge_lista_cinco_minutos:
+            self.__doge_doge_lista_cinco_minutos = cinco
+            return self.__doge_doge_lista_cinco_minutos
 
-        elif self.__btc_btc_lista_cinco_minutos:
-            lista = self.modelo_moeda.atualizar_candle(self.__btc_btc_lista_cinco_minutos, cinco)
+        elif self.__doge_doge_lista_cinco_minutos:
+            lista = self.modelo_moeda.atualizar_candle(self.__doge_doge_lista_cinco_minutos, cinco)
 
             return lista
         return {}
 
     """ Faz uma nova requisição para atualiar o valor para o canbdle de 10 minuto """
+
     def moeda_dez_minutos(self):
-        dez = self.conn_data.moeda_base('BTC_ETH')
+        dez = self.conn_data.moeda_base('BTC_DOGE')
 
-        if not self.__btc_btc_lista_dez_minutos:
-            self.__btc_btc_lista_dez_minutos = dez
-            return self.__btc_btc_lista_dez_minutos
+        if not self.__doge_doge_lista_dez_minutos:
+            self.__doge_doge_lista_dez_minutos = dez
+            return self.__doge_doge_lista_dez_minutos
 
-        elif self.__btc_btc_lista_dez_minutos:
-            lista = self.modelo_moeda.atualizar_candle(self.__btc_btc_lista_dez_minutos, dez)
+        elif self.__doge_doge_lista_dez_minutos:
+            lista = self.modelo_moeda.atualizar_candle(self.__doge_doge_lista_dez_minutos, dez)
 
             return lista
 
     """ Inicia o monitor de tempo para os candles """
+
     def inicar_monitor(self) -> None:
         """
-        Inica uma Thread para o monitor como arg
+        Inica uma Thread para o monitor como arg 
         :return: None
         """
 
         threading.Thread(target=self.monitor_tempo).start()
 
     """ Inicia a coleta dos candles de 1, 5 e 10 minutos """
+
     def inicar_moedas(self) -> None:
         """
         Inicia coleta
@@ -212,6 +221,7 @@ class BtcEntities(Moeda):
         self.moeda_dez_minutos()
 
     """ retorna um dicionario com todos os 3 candles """
+
     def retornar_moeda(self) -> dict:
         """
         Retorna dados da moeda
