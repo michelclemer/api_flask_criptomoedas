@@ -31,7 +31,11 @@ Docker
 ``$ pip install -r requirements.txt``
 
 
-# Iniciando:
+# Iniciando sem o docker:
+
+```python run.py``
+
+# Iniciando com docker:
 
 ``docker-compuse up --build``
 
