@@ -37,7 +37,7 @@ Docker
 
 # Iniciando com docker:
 
-``docker-compuse up --build``
+``docker-compose up --build``
 
 # Endpoints:
 
