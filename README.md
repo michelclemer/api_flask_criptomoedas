@@ -5,16 +5,17 @@
 Dados os preços de execução (cotações) de uma criptomoeda reportados em tempo real
 através de uma API pública.
 
-# Dependencies
-Python - Programming Language
+# Dependências
 
-Flask - The framework used
+Python
 
-Pip - Dependency Management
+Flask
+
+Pip 
 
 Virtual environments
 
-MySQL - Data base
+MySQL
 
 Docker
 
