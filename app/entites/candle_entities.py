@@ -57,9 +57,9 @@ class Candle(ModeloCandles):
             "lowestAsk": "",
             "highestBid": "",
         }
-        self.__bnb_btc_lista_um_minuto = {}
-        self.__bnb_btc_lista_cinco_minutos = {}
-        self.__bnb_btc_lista_dez_minutos = {}
+        self.__btc_btc_lista_um_minuto = {}
+        self.__btc_btc_lista_cinco_minutos = {}
+        self.__btc_btc_lista_dez_minutos = {}
         self.__data_atual = datetime.now()
         self.__controle_um_minuto = self.__data_atual + timedelta(minutes=1)
         self.__controle_cinco_minutos = self.__data_atual + timedelta(minutes=5)
@@ -81,23 +81,23 @@ class Candle(ModeloCandles):
             dt = datetime.now().time().minute
             print("x ", self.__controle_um_minuto.minute, dt)
             if dt == self.__controle_um_minuto.minute:
-                self.fechamento_candle(self.__bnb_btc_lista_um_minuto, 1)
-                print("1 Minuto ",self.__bnb_btc_lista_um_minuto)
-                self.__bnb_btc_lista_um_minuto = {}
+                self.fechamento_candle(self.__btc_btc_lista_um_minuto, 1)
+                print("1 Minuto ",self.__btc_btc_lista_um_minuto)
+                self.__btc_btc_lista_um_minuto = {}
                 self.__controle_um_minuto = datetime.now() + timedelta(minutes=1)
                 self.__btc_um_minuto()
 
             if dt == self.__controle_cinco_minutos.minute:
-                self.fechamento_candle(self.__bnb_btc_lista_cinco_minutos, 5)
-                print("5 Minutos ", self.__bnb_btc_lista_cinco_minutos)
-                self.__bnb_btc_lista_cinco_minutos = {}
+                self.fechamento_candle(self.__btc_btc_lista_cinco_minutos, 5)
+                print("5 Minutos ", self.__btc_btc_lista_cinco_minutos)
+                self.__btc_btc_lista_cinco_minutos = {}
                 self.__controle_cinco_minutos = datetime.now() + timedelta(minutes=5)
                 self.__btc_cinco_minutos()
 
             if dt == self.__controle_dez_minutos.minute:
-                self.fechamento_candle(self.__bnb_btc_lista_dez_minutos, 10)
+                self.fechamento_candle(self.__btc_btc_lista_dez_minutos, 10)
                 print("10 Minutos ", self.__controle_dez_minutos)
-                self.__bnb_btc_lista_dez_minutos = {}
+                self.__btc_btc_lista_dez_minutos = {}
                 self.__controle_dez_minutos = datetime.now() + timedelta(minutes=10)
                 self.__btc_dez_minutos()
 
@@ -115,26 +115,26 @@ class Candle(ModeloCandles):
 
         um = self.__btc_base()
 
-        if not self.__bnb_btc_lista_um_minuto:
-            self.__bnb_btc_lista_um_minuto = um
-            return self.__bnb_btc_lista_um_minuto
+        if not self.__btc_btc_lista_um_minuto:
+            self.__btc_btc_lista_um_minuto = um
+            return self.__btc_btc_lista_um_minuto
 
-        elif self.__bnb_btc_lista_um_minuto:
-            lista = self.atualizar_candle(self.__bnb_btc_lista_um_minuto, um)
+        elif self.__btc_btc_lista_um_minuto:
+            lista = self.atualizar_candle(self.__btc_btc_lista_um_minuto, um)
 
-            self.__bnb_btc_lista_um_minuto = lista
+            self.__btc_btc_lista_um_minuto = lista
             return lista
 
 
     def __btc_cinco_minutos(self):
         cinco = self.__btc_base()
 
-        if not self.__bnb_btc_lista_cinco_minutos:
-            self.__bnb_btc_lista_cinco_minutos = cinco
-            return self.__bnb_btc_lista_cinco_minutos
+        if not self.__btc_btc_lista_cinco_minutos:
+            self.__btc_btc_lista_cinco_minutos = cinco
+            return self.__btc_btc_lista_cinco_minutos
 
-        elif self.__bnb_btc_lista_cinco_minutos:
-            lista = self.atualizar_candle(self.__bnb_btc_lista_cinco_minutos, cinco)
+        elif self.__btc_btc_lista_cinco_minutos:
+            lista = self.atualizar_candle(self.__btc_btc_lista_cinco_minutos, cinco)
 
             return lista
 
@@ -142,12 +142,12 @@ class Candle(ModeloCandles):
 
         dez = self.__btc_base()
 
-        if not self.__bnb_btc_lista_dez_minutos:
-            self.__bnb_btc_lista_dez_minutos = dez
-            return self.__bnb_btc_lista_dez_minutos
+        if not self.__btc_btc_lista_dez_minutos:
+            self.__btc_btc_lista_dez_minutos = dez
+            return self.__btc_btc_lista_dez_minutos
 
-        elif self.__bnb_btc_lista_dez_minutos:
-            lista = self.atualizar_candle(self.__bnb_btc_lista_dez_minutos, dez)
+        elif self.__btc_btc_lista_dez_minutos:
+            lista = self.atualizar_candle(self.__btc_btc_lista_dez_minutos, dez)
 
             return lista
 

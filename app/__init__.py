@@ -10,6 +10,8 @@ app = Flask(__name__)
 
 @app.before_first_request
 def monitor():
-    candle_ob.iniciar_monitor()
+    moeda_btc.inicar_monitor()
+    moeda_bts.inicar_monitor()
+
 
 app.register_blueprint(model_candle)

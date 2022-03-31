@@ -5,6 +5,8 @@ class DatabaseConnection:
         pass
 
     def start_db(self):
+        #alterar host antes de iniciar a aplicacao
+
         cnx = mysql.connector.connect(user='newuser', password='password',
                                       host='db',
                                       database='candles')
@@ -25,7 +27,8 @@ class DatabaseConnection:
                low VARCHAR(150) NOT NULL,
                high VARCHAR(150) NOT NULL,
                close VARCHAR(150) NOT NULL,
-               hash VARCHAR(150) NOT NULL
+               hash VARCHAR(150) NOT NULL,
+               date_time TIMESTAMP DEFAULT CURRENT_TIMESTAMP
                 )'''
             cursor.execute(sql)
             conn.commit()
