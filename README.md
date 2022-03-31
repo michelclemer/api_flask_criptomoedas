@@ -1,6 +1,6 @@
 # Flask API para Poloniex
 
-### Poloniex ->  ``https://docs.poloniex.com/#returnticker``
+### Poloniex API ->  ``https://docs.poloniex.com/#returnticker``
 
 Dados os preços de execução (cotações) de uma criptomoeda reportados em tempo real
 através de uma API pública.
