@@ -56,12 +56,19 @@ Resultado JSON:
 
 * 1 : Candle de 1 minuto.
   
-    ######A cada 1 minuto o valor do candle fecha 
+    ###### A cada 1 minuto o valor do candle fecha 
 * 5 : Candles de 5 minutos.
     
-    ######A cada 5 minuto o valor do candle fecha 
+    ###### A cada 5 minuto o valor do candle fecha 
 * 10 : Candle de 10 minutos.
 
-    ######A cada 10 minuto o valor do candle fecha
+    ###### A cada 10 minuto o valor do candle fecha
 
+* abertura : Preço de execução para a negociação mais recente para este par.
+
+* fechamento : Preço final após finalizar o candle.
+
+* maximo : Preço de venda atual mais alto para este ativo.
+
+* minimo : Menor preço de compra atual para este ativo.
 
