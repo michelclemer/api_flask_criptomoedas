@@ -52,12 +52,12 @@ Docker
 
 
 
-## Respostas api:
+# Respostas api:
 
 ![image](https://user-images.githubusercontent.com/42013634/161131433-a978bc6a-7500-47b0-9500-c6dc6f97050a.png)
 
 
-Resultado JSON:
+## Resultado JSON:
 
 * 1 : Candle de 1 minuto.
   
