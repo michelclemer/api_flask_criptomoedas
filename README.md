@@ -27,7 +27,7 @@ Docker
 
 ``$ pip install Flask``
 
-## Instalando as dependencias usando:
+# Instalando as dependencias usando:
 
 ``$ pip install -r requirements.txt``
 
